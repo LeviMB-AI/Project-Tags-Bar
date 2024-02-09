@@ -7,10 +7,11 @@ app = Flask(__name__)
 
 #Ao criar pastas criar um arquivo __init__.py, para import e export
 """
-ele pega os métodos post que são requeridos para o servidor (como um post para uma api) e cria aqui uma tag bar da variavel product_code
+ele pega os métodos post que são requeridos para o servidor 
+(como um post para uma api) e cria aqui uma tag bar da variavel product_code
 """
 
-@app.rout('/create_tag', methods=["POST"])
+@app.route('/create_tag', methods=["POST"])
 def create_tag():
     body = request.json
     product_code = body.get('product_code')
